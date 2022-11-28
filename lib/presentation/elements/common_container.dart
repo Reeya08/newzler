@@ -6,6 +6,7 @@ class CommonContainer extends StatelessWidget {
     required this.imagePath,
   }) : super(key: key);
   final String imagePath;
+
   @override
   Widget build(BuildContext context) {
     return Container(

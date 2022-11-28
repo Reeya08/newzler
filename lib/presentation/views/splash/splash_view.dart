@@ -7,6 +7,7 @@ import '../onboarding/onboarding_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);
+
   State<SplashView> createState() => _SplashViewState();
 }
 
@@ -17,9 +18,9 @@ class _SplashViewState extends State<SplashView> {
     Timer(Duration(seconds: 5), () {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => OnboardingView()));
-    }
-    );
+    });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

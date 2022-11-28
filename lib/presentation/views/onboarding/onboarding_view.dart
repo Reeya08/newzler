@@ -45,7 +45,7 @@ class OnboardingView extends StatelessWidget {
             const CustomText(
               text: 'We bring you closer to the news',
               fontSize: 40,
-              fontWeight: FontWeight.bold ,
+              fontWeight: FontWeight.bold,
             ),
             const SizedBox(
               height: 24,
@@ -61,7 +61,10 @@ class OnboardingView extends StatelessWidget {
                 decoration: const BoxDecoration(),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => OnboardingView2()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => OnboardingView2()));
                   },
                   style: ElevatedButton.styleFrom(
                     elevation: 12,

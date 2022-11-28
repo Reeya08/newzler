@@ -3,5 +3,4 @@ class OnboardingModel {
   final String text;
 
   OnboardingModel({required this.imagePath, required this.text});
-
 }

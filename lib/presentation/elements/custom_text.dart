@@ -15,12 +15,12 @@ class CustomText extends StatelessWidget {
   final Color color;
   final String fontFamily;
 
-
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      textAlign: TextAlign.center,
+      textAlign: TextAlign.start,
+      overflow: TextOverflow.ellipsis,
       style: TextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
