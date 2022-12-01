@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:newzler/presentation/views/account/account_view1.dart';
+import 'package:newzler/presentation/views/account/account_view.dart';
 
 class BottomNavigationView extends StatefulWidget {
   const BottomNavigationView({Key? key}) : super(key: key);

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:newzler/models/account_list_tile_model.dart';
 import 'package:newzler/presentation/elements/account_list_tile.dart';
+import 'package:newzler/presentation/elements/custom_button.dart';
+import 'package:newzler/presentation/elements/custom_button_with_only%20_border.dart';
 import 'package:newzler/presentation/elements/custom_text.dart';
 
 class AccountView extends StatelessWidget {
@@ -90,6 +92,16 @@ class AccountView extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                CustomButton(childText: 'Login', height: 55, width: 150, textSize: 18,radius: 12,),
+                CustomButtonWithOnlyBorder(childText: 'Sign Up' , height: 55, width: 150, textSize: 18, onPressed: (){},radius: 12,),
+              ],
+            ),
+            SizedBox(height: 10,),
+            // Divider(),
+            SizedBox(height: 20,),
             ListTile(
               leading: Image.asset(
                 'assets/images/profile.png',
@@ -119,9 +131,7 @@ class AccountView extends StatelessWidget {
                 color: Color(0xff6B6E74),
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
+
             const Divider(),
             Expanded(
               child: ListView.builder(

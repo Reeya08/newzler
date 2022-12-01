@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:newzler/presentation/elements/common_back_and_cross_row_icon.dart';
 import 'package:newzler/presentation/elements/custom_button.dart';
+import 'package:newzler/presentation/elements/custom_email_text_form_field.dart';
+import 'package:newzler/presentation/elements/custom_password_text_form_field.dart';
 import 'package:newzler/presentation/elements/custom_text.dart';
 
 class SignInView extends StatelessWidget {
@@ -43,87 +45,13 @@ class SignInView extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 30,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 2, right: 190),
-              child: Text(
-                'YOUR EMAIL/ USERNAME',
-                style: TextStyle(
-                  fontSize: 10,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xff6B6E74),
-                  fontFamily: 'Inter',
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            Container(
-              height: 1,
-              width: 330,
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 0.4,
-                      color: Color(0xff262A34),
-                    ),
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 1,
-                      color: Color(0xff262A34),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 2, right: 230),
-              child: Text(
-                'YOUR PASSWORD',
-                style: TextStyle(
-                  fontSize: 10,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xff6B6E74),
-                  fontFamily: 'Inter',
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Container(
               height: 20,
-              width: 330,
-              child: TextFormField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  suffix: Image.asset(
-                    'assets/images/hide_password.png',
-                    height: 20,
-                    width: 20,
-                  ),
-                  focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 0.4,
-                      color: Color(0xff262A34),
-                    ),
-                  ),
-                  enabledBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 1,
-                      color: Color(0xff262A34),
-                    ),
-                  ),
-                ),
-              ),
             ),
+           CustomEmailTextFormField(labeText: 'YOUR EMAIL/USERNAME',),
+            const SizedBox(
+              height: 20,
+            ),
+            CustomPasswordTextFormField(hidePassword: true, labeText: 'YOUR PASSWORD',),
             const SizedBox(
               height: 40,
             ),
@@ -134,7 +62,7 @@ class SignInView extends StatelessWidget {
               textSize: 18,
             ),
             const SizedBox(
-              height: 120,
+              height: 80,
             ),
             const CustomText(
               text: 'Forgot your password?',

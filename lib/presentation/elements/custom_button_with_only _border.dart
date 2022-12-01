@@ -27,6 +27,7 @@ class CustomButtonWithOnlyBorder extends StatelessWidget {
       child: OutlinedButton(
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
+          backgroundColor: Colors.white,
           elevation: 1,
           side: const BorderSide(
             color: Color(0xffC4C4C4),

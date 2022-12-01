@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:newzler/presentation/elements/common_back_and_cross_row_icon.dart';
 import 'package:newzler/presentation/elements/common_email_button.dart';
+import 'package:newzler/presentation/elements/custom_email_text_form_field.dart';
+import 'package:newzler/presentation/elements/custom_password_text_form_field.dart';
 import 'package:newzler/presentation/elements/custom_text.dart';
 
 class ForgotPasswordView extends StatelessWidget {
@@ -44,44 +46,7 @@ class ForgotPasswordView extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const Padding(
-              padding: EdgeInsets.only(
-                left: 1,
-                right: 275,
-              ),
-              child: Text(
-                'YOUR EMAIL',
-                style: TextStyle(
-                  fontFamily: 'Inter',
-                  fontSize: 10,
-                  color: Color(0xff6B6E74),
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Container(
-              height: 1,
-              width: 330,
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 0.4,
-                      color: Color(0xff262A34),
-                    ),
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 1,
-                      color: Color(0xff262A34),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+           CustomPasswordTextFormField(hidePassword: false, labeText: 'YOUR EMAIL', suffixImagePath: 'assets/images/Close.png',),
             const SizedBox(
               height: 30,
             ),

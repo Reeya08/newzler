@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:newzler/presentation/elements/custom_button.dart';
+import 'package:newzler/presentation/elements/custom_email_text_form_field.dart';
+import 'package:newzler/presentation/elements/custom_password_text_form_field.dart';
 import 'package:newzler/presentation/elements/custom_text.dart';
 
 import '../../elements/common_back_and_cross_row_icon.dart';
@@ -20,7 +22,7 @@ class SignUpView extends StatelessWidget {
               const SizedBox(
                 height: 71,
               ),
-              CommonBackAndCrossRow(),
+              const CommonBackAndCrossRow(),
               const SizedBox(
                 height: 40,
               ),
@@ -141,87 +143,24 @@ class SignUpView extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              const Padding(
-                padding: EdgeInsets.only(
-                  left: 2,
-                  right: 180,
-                ),
-                child: CustomText(
-                  text: 'CHOOSE YOUR USERNAME',
-                  fontSize: 10,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: 'Inter',
-                ),
+              const CustomEmailTextFormField(
+                labeText: 'CHOOSE YOUR USER NAME',
               ),
               const SizedBox(
                 height: 30,
               ),
-              Container(
-                height: 1,
-                width: 330,
-                child: TextFormField(
-                  decoration: const InputDecoration(
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        width: 0.4,
-                        color: Color(0xff262A34),
-                      ),
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        width: 1,
-                        color: Color(0xff262A34),
-                      ),
-                    ),
-                  ),
-                ),
+              const CustomEmailTextFormField(
+                labeText: 'YOUR EMAIL',
               ),
               const SizedBox(
                 height: 30,
               ),
-              const Padding(
-                padding: EdgeInsets.only(
-                  left: 2,
-                  right: 180,
-                ),
-                child: CustomText(
-                  text: 'CHOOSE YOUR PASSWORD',
-                  fontSize: 10,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: 'Inter',
-                ),
+              const CustomPasswordTextFormField(
+                hidePassword: true,
+                labeText: 'YOUR PASSWORD',
               ),
               const SizedBox(
-                height: 15,
-              ),
-              Container(
-                height: 20,
-                width: 330,
-                child: TextFormField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    suffix: Image.asset(
-                      'assets/images/hide_password.png',
-                      height: 20,
-                      width: 20,
-                    ),
-                    focusedBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        width: 0.4,
-                        color: Color(0xff262A34),
-                      ),
-                    ),
-                    enabledBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        width: 1,
-                        color: Color(0xff262A34),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 30,
+                height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -254,10 +193,8 @@ class SignUpView extends StatelessWidget {
                 width: 330,
                 textSize: 18,
               ),
-              // CustomText(text: 'Already have an account?', fontSize: 13, fontWeight: FontWeight.w600,),
-              // CustomText(text: 'Login', fontSize: 13, fontWeight: FontWeight.w600, color: Color(0xff209CEE),),
               const SizedBox(
-                height: 40,
+                height: 30,
               ),
               RichText(
                 text: const TextSpan(

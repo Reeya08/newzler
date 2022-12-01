@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:newzler/presentation/elements/custom_button.dart';
 import 'package:newzler/presentation/elements/custom_button_with_only%20_border.dart';
+import 'package:newzler/presentation/elements/custom_email_text_form_field.dart';
+import 'package:newzler/presentation/elements/custom_password_text_form_field.dart';
 import 'package:newzler/presentation/elements/custom_text.dart';
 
 class ConfirmEmailView extends StatelessWidget {
@@ -25,43 +27,7 @@ class ConfirmEmailView extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const CustomText(
-              text: 'CONFIRM YOUR CODE',
-              fontSize: 10,
-              fontWeight: FontWeight.w700,
-              fontFamily: 'Inter',
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              height: 20,
-              width: 330,
-              child: TextFormField(
-                style: const TextStyle(
-                  letterSpacing: 24,
-                ),
-                decoration: InputDecoration(
-                  suffix: Image.asset(
-                    'assets/images/Close.png',
-                    height: 20,
-                    width: 20,
-                  ),
-                  focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 0.4,
-                      color: Color(0xff262A34),
-                    ),
-                  ),
-                  enabledBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 1,
-                      color: Color(0xff262A34),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            CustomPasswordTextFormField(hidePassword: false, labeText: 'CONFIRMATION CODE', suffixImagePath: 'assets/images/Close.png',),
             const SizedBox(
               height: 20,
             ),
