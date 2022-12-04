@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newzler/presentation/elements/custom_account_title.dart';
 
 import '../../elements/custom_button.dart';
 import '../../elements/custom_text.dart';
@@ -31,16 +32,7 @@ class CreatePasswordView extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const CustomText(
-                  text: 'Create Password',
-                  fontSize: 32,
-                  fontWeight: FontWeight.w600,
-                ),
-              ],
-            ),
+             const CustomAccountTitle(titleText: 'Create Password',),
             const SizedBox(
               height: 30,
             ),

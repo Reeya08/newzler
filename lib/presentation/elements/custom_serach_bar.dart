@@ -23,6 +23,7 @@ class CustomSearchBar extends StatelessWidget {
               width: 1,
               color: const Color(0xfF4F5F7),
             ),
+
             borderRadius: BorderRadius.circular(12.0),
           ),
         ),

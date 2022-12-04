@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newzler/presentation/elements/custom_account_title.dart';
 import 'package:newzler/presentation/elements/custom_button.dart';
 import 'package:newzler/presentation/elements/custom_first_and_last_name_field.dart';
 
@@ -20,16 +21,7 @@ class PofileView3 extends StatelessWidget {
             ),
             const CommonBackAndCrossRow(),
             const SizedBox(height: 30,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const CustomText(
-                  text: 'Your name',
-                  fontSize: 32,
-                  fontWeight: FontWeight.w600,
-                ),
-              ],
-            ),
+            const CustomAccountTitle(titleText: 'Your name',),
             const SizedBox(height: 30,),
             const CustomFirstAndLastNameField(),
             const SizedBox(height: 20,),

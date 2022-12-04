@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:newzler/presentation/views/account/account_view.dart';
+import 'package:newzler/presentation/views/search/search_view1.dart';
 
 class BottomNavigationView extends StatefulWidget {
   const BottomNavigationView({Key? key}) : super(key: key);
@@ -13,10 +14,8 @@ class _BottomNavigationViewState extends State<BottomNavigationView> {
   int _currentIndex = 0;
   final List<Widget> _allScreens = [
     AccountView(),
-    AccountView(),
-    AccountView(),
-    AccountView(),
-    AccountView(),
+    SearchView1(),
+
   ];
 
   @override
@@ -49,7 +48,7 @@ class _BottomNavigationViewState extends State<BottomNavigationView> {
           BottomNavigationBarItem(
             label: 'Search',
             icon:
-                Image.asset('assets/images/bottom_navigation_bar_search.png'),
+                Image.asset('assets/images/search_fill.png'),
           ),
           BottomNavigationBarItem(
             label: 'More',

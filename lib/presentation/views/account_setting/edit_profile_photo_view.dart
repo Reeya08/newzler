@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newzler/presentation/elements/custom_account_title.dart';
 import 'package:newzler/presentation/elements/custom_button.dart';
 import 'package:newzler/presentation/elements/custom_button_with_only%20_border.dart';
 
@@ -33,17 +34,7 @@ class EditProfilePhotoView extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            const Padding(
-              padding: EdgeInsets.only(
-                left: 2,
-                right: 110,
-              ),
-              child: CustomText(
-                text: 'How you will appear?',
-                fontSize: 32,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
+            const CustomAccountTitle(titleText: 'How you will appear?'),
             const SizedBox(
               height: 40,
             ),

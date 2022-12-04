@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newzler/presentation/elements/custom_account_title.dart';
 import 'package:newzler/presentation/elements/custom_email_text_form_field.dart';
 import 'package:newzler/presentation/elements/custom_password_text_form_field.dart';
 
@@ -32,16 +33,7 @@ class ProfileView1 extends StatelessWidget {
             children: [
               const Divider(),
               const SizedBox(height: 10,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const CustomText(
-                    text: 'Profile',
-                    fontSize: 32,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ],
-              ),
+              const CustomAccountTitle(titleText: 'Profile',),
               const CustomPasswordTextFormField(
                 hidePassword: false,
                 labeText: 'NAME',
